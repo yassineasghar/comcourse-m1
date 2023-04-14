@@ -22,7 +22,8 @@ services:
       CONCOURSE_POSTGRES_DATABASE: concourse
       # replace this (-->THIS<--) with your external IP address
       CONCOURSE_EXTERNAL_URL: http://-->THIS<--:8080
-      CONCOURSE_ADD_LOCAL_USER: test:test
+      # change the user:password where admin:123456789
+      CONCOURSE_ADD_LOCAL_USER: admin:123456789
       CONCOURSE_MAIN_TEAM_LOCAL_USER: test
       # instead of relying on the default "detect"
       CONCOURSE_WORKER_BAGGAGECLAIM_DRIVER: overlay
@@ -30,6 +31,6 @@ services:
       CONCOURSE_TSA_CLIENT_SECRET: Y29uY291cnNlLXdvcmtlcgo=
       CONCOURSE_X_FRAME_OPTIONS: allow
       CONCOURSE_CONTENT_SECURITY_POLICY: "*"
-      CONCOURSE_CLUSTER_NAME: arm64
+      CONCOURSE_CLUSTER_NAME: cluster_name
       CONCOURSE_WORKER_CONTAINERD_DNS_SERVER: "8.8.8.8"
       CONCOURSE_WORKER_RUNTIME: "containerd"
